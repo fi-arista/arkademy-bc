@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+
+<script>
+var s, i, j, x = "";
+s = {
+    "itemId" : "12341822", 
+"itemName" : "FGX Flannel Shirt", 
+"price" : 195000,
+   "availableColorAndSize" : [
+{"color": "blue-black", "size": ["M","L","XL"]}, 
+{"color": "black-white", "size":[ "L"]}],
+    "FreeShipping" : false}
+
+for (i in s.availableColorAndSize) {
+    x += "Color: " + s.availableColorAndSize[i].color +"<br>" + "Size: ";
+    for (j in s.availableColorAndSize[i].size) {
+        x += s.availableColorAndSize[i].size[j] +"<br>";
+    }
+}
+
+
+document.getElementById("demo").innerHTML = "Item ID: " + s.itemId + "<br>" + 
+"Item name: " + s.itemName + "<br>" + 
+"Price: " + s.price + "<br>" + x + "<br>" + 
+"Free Shipping: " + s.freeShiping;
+
+</script>
+
+</body>
+</html>
