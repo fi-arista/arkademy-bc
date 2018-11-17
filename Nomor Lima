@@ -1,0 +1,9 @@
+public class Ganti{
+
+public static void main(String args[]){  
+String s1="kelompok";  
+String 
+
+ganti=s1.replace('o','a');
+System.out.println(ganti);  
+}}  
