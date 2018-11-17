@@ -1,0 +1,37 @@
+<html>
+   
+   
+   <body>
+   
+      <?php
+         
+function betweendays($start, $end) {
+    $interval = new 
+
+DateInterval('P1D'); 
+    $realEnd = new DateTime($end);
+    $realEnd->add($interval);
+    $period = new 
+
+DatePeriod(
+         new DateTime($start),
+         $interval,
+         $realEnd
+    );
+    foreach($period as 
+
+$date) { 
+        $array [] = "'". $date->format('Y-m-d'). "'" . ","; 
+    }
+    return $array;
+}
+// Call the 
+
+function
+$dates = betweendays('2018-11-01', '2018-11-05');
+// Print the output
+print_r($dates) ;
+      ?>
+      
+   </body>
+</html>
